@@ -13,7 +13,6 @@ require 'rake'
 
 require 'jeweler'
 Jeweler::Tasks.new do |gem|
-  # gem is a Gem::Specification... see http://docs.rubygems.org/read/chapter/20 for more options
   gem.name = "simple-masker"
   gem.homepage = "http://github.com/more-ron/simple-masker"
   gem.license = "MIT"
@@ -21,18 +20,14 @@ Jeweler::Tasks.new do |gem|
   gem.description = %Q{Acts like a SimpleDelegator implementing a decorator pattern except that it hides the object's methods instead of delegating them by default. Useful for hiding the ugly beast behind the mask.}
   gem.email = "more.ron.too@gmail.com"
   gem.authors = ["MoreRon"]
-  # dependencies defined in Gemfile
+  gem.files = "lib/*"
 end
 Jeweler::RubygemsDotOrgTasks.new
 
-require 'rake/testtask'
-Rake::TestTask.new(:test) do |test|
-  test.libs << 'lib' << 'test'
-  test.pattern = 'test/**/test_*.rb'
-  test.verbose = true
-end
+require 'rspec/core/rake_task'
+RSpec::Core::RakeTask.new(:spec)
 
-task :default => :test
+task :default => :spec
 
 require 'rdoc/task'
 Rake::RDocTask.new do |rdoc|
