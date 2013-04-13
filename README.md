@@ -1,9 +1,11 @@
 simple-masker
 =============
 
-{<img src="https://travis-ci.org/more-ron/simple-masker.png" />}[https://travis-ci.org/more-ron/simple-masker]
+<a href="https://travis-ci.org/more-ron/simple-masker"><img src="https://travis-ci.org/more-ron/simple-masker.png" /></a>
 
 An implementation of presenter pattern.
+
+== [Documentation](http://more-ron.github.io/simple-masker/)
 
 == Contributing to simple-masker
 
